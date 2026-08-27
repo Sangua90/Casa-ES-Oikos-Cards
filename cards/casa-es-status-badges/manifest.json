@@ -1,13 +1,14 @@
 {
   "id": "casa-es-status-badges",
+  "type": "badge",
   "name": "Casa ES Distintivi",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "author": "Casa ES",
-  "description": "Barra distintivi rapidi per stato casa.",
+  "description": "Barra distintivi Casa ES per allarme, garage, ospiti, batteria, boiler e rete.",
   "sdkVersion": "^1.2.0",
   "hasSettings": false,
   "entry": "dist/casa-es-status-badges.js",
-  "tags": ["home", "status", "badges"],
+  "tags": ["home", "status", "badge"],
   "configVersion": 1,
-  "defaultWidth": "full"
+  "tier": "free"
 }
