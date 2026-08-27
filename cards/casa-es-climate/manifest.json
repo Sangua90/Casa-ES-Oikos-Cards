@@ -1,0 +1,13 @@
+{
+  "id": "casa-es-climate",
+  "name": "Casa ES Climate",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Riepilogo rapido dei 5 climatizzatori principali.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": false,
+  "entry": "dist/casa-es-climate.js",
+  "tags": ["climate"],
+  "configVersion": 1,
+  "defaultWidth": "full"
+}
