@@ -1,7 +1,7 @@
 {
   "id": "casa-es-lights",
   "name": "Casa ES Lights",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Casa ES",
   "description": "Sei luci preferite con toggle rapido.",
   "sdkVersion": "^1.2.0",
@@ -9,5 +9,5 @@
   "entry": "dist/casa-es-lights.js",
   "tags": ["lights"],
   "configVersion": 1,
-  "defaultWidth": "full"
+  "defaultWidth": "half"
 }
