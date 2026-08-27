@@ -1,7 +1,7 @@
 {
   "id": "casa-es-energy",
   "name": "Casa ES Energy",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Casa ES",
   "description": "Riepilogo FV, casa, batteria, rete e PV Excess.",
   "sdkVersion": "^1.2.0",
@@ -9,6 +9,6 @@
   "entry": "dist/casa-es-energy.js",
   "tags": ["energy"],
   "configVersion": 1,
-  "defaultWidth": "full",
+  "defaultWidth": "lg",
   "settings": "dist/casa-es-energy.settings.js"
 }
