@@ -44,5 +44,4 @@ jobs:
           generate_release_notes: true
           files: |
             manifest.json
-            cards/*/manifest.json
             cards/*/dist/*.js
