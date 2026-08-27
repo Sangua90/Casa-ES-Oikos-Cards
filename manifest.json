@@ -1,6 +1,6 @@
 {
   "repo": "Sangua90/Casa-ES-Oikos-Cards",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "sdkVersion": "1.2.0",
   "updated": "2026-08-27",
   "cards": [
@@ -11,7 +11,7 @@
     {"id":"casa-es-lights","name":"Casa ES Lights","version":"1.0.0","author":"Casa ES","description":"Sei luci preferite con toggle rapido.","sdkVersion":"^1.2.0","hasSettings":false,"path":"cards/casa-es-lights","entry":"cards/casa-es-lights/dist/casa-es-lights.js","settings":null,"manifest":"cards/casa-es-lights/manifest.json","preview":null,"previews":null,"thumbnail":null,"logo":null,"tags":["lights"],"package":null,"tier":"free","changelog":null,"readme":null},
     {"id":"casa-es-navigation","name":"Casa ES Navigation","version":"1.0.0","author":"Casa ES","description":"Navigazione rapida alle sezioni principali.","sdkVersion":"^1.2.0","hasSettings":false,"path":"cards/casa-es-navigation","entry":"cards/casa-es-navigation/dist/casa-es-navigation.js","settings":null,"manifest":"cards/casa-es-navigation/manifest.json","preview":null,"previews":null,"thumbnail":null,"logo":null,"tags":["navigation"],"package":null,"tier":"free","changelog":null,"readme":null},
     {"id":"casa-es-overview","name":"Casa ES Overview","version":"1.0.0","author":"Casa ES","description":"Sicurezza, garage e modalità ospiti in stile Apple.","sdkVersion":"^1.2.0","hasSettings":true,"path":"cards/casa-es-overview","entry":"cards/casa-es-overview/dist/casa-es-overview.js","settings":"cards/casa-es-overview/dist/casa-es-overview.settings.js","manifest":"cards/casa-es-overview/manifest.json","preview":null,"previews":null,"thumbnail":null,"logo":null,"tags":["home","security"],"package":null,"tier":"free","changelog":null,"readme":null},
-    {"id":"casa-es-status-badges","name":"Casa ES Distintivi","version":"1.0.0","author":"Casa ES","description":"Barra distintivi rapidi per stato casa.","sdkVersion":"^1.2.0","hasSettings":false,"path":"cards/casa-es-status-badges","entry":"cards/casa-es-status-badges/dist/casa-es-status-badges.js","settings":null,"manifest":"cards/casa-es-status-badges/manifest.json","preview":null,"previews":null,"thumbnail":null,"logo":null,"tags":["home","status","badges"],"package":null,"tier":"free","changelog":null,"readme":null},
+    {"id":"casa-es-status-badges","type":"badge","name":"Casa ES Distintivi","version":"1.1.1","author":"Casa ES","description":"Barra distintivi Casa ES per allarme, garage, ospiti, batteria, boiler e rete.","sdkVersion":"^1.2.0","hasSettings":false,"path":"cards/casa-es-status-badges","entry":"cards/casa-es-status-badges/dist/casa-es-status-badges.js","settings":null,"manifest":"cards/casa-es-status-badges/manifest.json","preview":null,"previews":null,"thumbnail":null,"logo":null,"tags":["home","status","badge"],"package":null,"tier":"free","changelog":null,"readme":null},
     {"id":"casa-es-weather","name":"Casa ES Weather","version":"1.0.0","author":"Casa ES","description":"Meteo compatto con allerta temporali.","sdkVersion":"^1.2.0","hasSettings":true,"path":"cards/casa-es-weather","entry":"cards/casa-es-weather/dist/casa-es-weather.js","settings":"cards/casa-es-weather/dist/casa-es-weather.settings.js","manifest":"cards/casa-es-weather/manifest.json","preview":null,"previews":null,"thumbnail":null,"logo":null,"tags":["weather"],"package":null,"tier":"free","changelog":null,"readme":null}
   ]
 }
