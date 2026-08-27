@@ -1,0 +1,13 @@
+{
+  "id": "casa-es-badge-ospiti",
+  "type": "badge",
+  "name": "Casa ES Badge Ospiti",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Distintivo modalità ospiti.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": false,
+  "entry": "dist/casa-es-badge-ospiti.js",
+  "tags": ["home", "guests", "badge"],
+  "configVersion": 1
+}
