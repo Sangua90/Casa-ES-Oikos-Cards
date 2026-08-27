@@ -18,7 +18,7 @@ jobs:
       - name: Read version
         id: version
         shell: bash
-        run: echo "version=$(python -c \"import json; print(json.load(open('manifest.json'))['version'])\")" >> "$GITHUB_OUTPUT"
+        run: echo "version=$(jq -r '.version' manifest.json)" >> "$GITHUB_OUTPUT"
       - name: Create tag and release
         env:
           GH_TOKEN: ${{ github.token }}
