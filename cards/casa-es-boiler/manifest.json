@@ -1,0 +1,14 @@
+{
+  "id": "casa-es-boiler",
+  "name": "Casa ES Boiler",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Card compatta del boiler Ariston.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": true,
+  "entry": "dist/casa-es-boiler.js",
+  "tags": ["home", "water"],
+  "configVersion": 1,
+  "defaultWidth": "half",
+  "settings": "dist/casa-es-boiler.settings.js"
+}
