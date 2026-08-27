@@ -1,0 +1,13 @@
+{
+  "id": "casa-es-badge-boiler",
+  "type": "badge",
+  "name": "Casa ES Badge Boiler",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Distintivo stato riscaldamento boiler.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": false,
+  "entry": "dist/casa-es-badge-boiler.js",
+  "tags": ["home", "boiler", "badge"],
+  "configVersion": 1
+}
