@@ -1,0 +1,13 @@
+{
+  "id": "casa-es-navigation",
+  "name": "Casa ES Navigation",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Navigazione rapida alle sezioni principali.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": false,
+  "entry": "dist/casa-es-navigation.js",
+  "tags": ["navigation"],
+  "configVersion": 1,
+  "defaultWidth": "full"
+}
