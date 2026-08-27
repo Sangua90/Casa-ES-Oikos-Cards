@@ -1,7 +1,7 @@
 {
   "id": "casa-es-overview",
   "name": "Casa ES Overview",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Casa ES",
   "description": "Sicurezza, garage e modalità ospiti in stile Apple.",
   "sdkVersion": "^1.2.0",
@@ -9,6 +9,6 @@
   "entry": "dist/casa-es-overview.js",
   "tags": ["home", "security"],
   "configVersion": 1,
-  "defaultWidth": "full",
+  "defaultWidth": "half",
   "settings": "dist/casa-es-overview.settings.js"
 }
