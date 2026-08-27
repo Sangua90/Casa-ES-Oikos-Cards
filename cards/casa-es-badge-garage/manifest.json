@@ -1,0 +1,13 @@
+{
+  "id": "casa-es-badge-garage",
+  "type": "badge",
+  "name": "Casa ES Badge Garage",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Distintivo stato portone garage.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": false,
+  "entry": "dist/casa-es-badge-garage.js",
+  "tags": ["home", "garage", "badge"],
+  "configVersion": 1
+}
