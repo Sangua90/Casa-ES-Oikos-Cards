@@ -1,0 +1,14 @@
+{
+  "id": "casa-es-weather",
+  "name": "Casa ES Weather",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Meteo compatto con allerta temporali.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": true,
+  "entry": "dist/casa-es-weather.js",
+  "tags": ["weather"],
+  "configVersion": 1,
+  "defaultWidth": "full",
+  "settings": "dist/casa-es-weather.settings.js"
+}
