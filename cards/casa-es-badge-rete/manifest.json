@@ -1,0 +1,13 @@
+{
+  "id": "casa-es-badge-rete",
+  "type": "badge",
+  "name": "Casa ES Badge Rete",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Distintivo potenza rete ENEL.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": false,
+  "entry": "dist/casa-es-badge-rete.js",
+  "tags": ["energy", "grid", "badge"],
+  "configVersion": 1
+}
