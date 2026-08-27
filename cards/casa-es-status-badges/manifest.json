@@ -1,0 +1,13 @@
+{
+  "id": "casa-es-status-badges",
+  "name": "Casa ES Distintivi",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Barra distintivi rapidi per stato casa.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": false,
+  "entry": "dist/casa-es-status-badges.js",
+  "tags": ["home", "status", "badges"],
+  "configVersion": 1,
+  "defaultWidth": "full"
+}
