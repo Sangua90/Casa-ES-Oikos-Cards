@@ -1,0 +1,14 @@
+{
+  "id": "casa-es-battery-check",
+  "name": "Casa ES Battery Check",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Pulsante rapido controllo batterie.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": true,
+  "entry": "dist/casa-es-battery-check.js",
+  "tags": ["energy"],
+  "configVersion": 1,
+  "defaultWidth": "half",
+  "settings": "dist/casa-es-battery-check.settings.js"
+}
