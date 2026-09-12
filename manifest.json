@@ -1,6 +1,6 @@
 {
   "repo": "Sangua90/Casa-ES-Oikos-Cards",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "sdkVersion": "1.2.0",
   "updated": "2026-09-12",
   "cards": [
@@ -70,6 +70,94 @@
           ]
         }
       ],
+      "readme": null
+    },
+    {
+      "id": "casa-es-boiler",
+      "name": "Casa ES Boiler",
+      "version": "1.0.0",
+      "author": "Casa ES",
+      "description": "Temperatura attuale del boiler Ariston con colore dinamico durante il riscaldamento.",
+      "sdkVersion": "^1.2.0",
+      "hasSettings": true,
+      "path": "cards/casa-es-boiler",
+      "entry": "cards/casa-es-boiler/dist/casa-es-boiler.js",
+      "settings": "cards/casa-es-boiler/dist/casa-es-boiler.settings.js",
+      "manifest": "cards/casa-es-boiler/manifest.json",
+      "preview": null,
+      "previews": null,
+      "thumbnail": null,
+      "logo": null,
+      "tags": ["home", "boiler", "water-heater", "temperature"],
+      "package": null,
+      "tier": "free",
+      "changelog": [{
+        "version": "1.0.0",
+        "date": "2026-09-12",
+        "changes": [
+          "Current water temperature.",
+          "Dynamic card color while the boiler is heating."
+        ]
+      }],
+      "readme": null
+    },
+    {
+      "id": "casa-es-ospiti",
+      "name": "Casa ES Modalità Ospiti",
+      "version": "1.0.0",
+      "author": "Casa ES",
+      "description": "Comando e stato della modalità ospiti con promemoria Home Assistant.",
+      "sdkVersion": "^1.2.0",
+      "hasSettings": true,
+      "path": "cards/casa-es-ospiti",
+      "entry": "cards/casa-es-ospiti/dist/casa-es-ospiti.js",
+      "settings": "cards/casa-es-ospiti/dist/casa-es-ospiti.settings.js",
+      "manifest": "cards/casa-es-ospiti/manifest.json",
+      "preview": null,
+      "previews": null,
+      "thumbnail": null,
+      "logo": null,
+      "tags": ["home", "guests", "mode", "controls"],
+      "package": null,
+      "tier": "free",
+      "changelog": [{
+        "version": "1.0.0",
+        "date": "2026-09-12",
+        "changes": [
+          "Live guest mode status and toggle.",
+          "Reminder information for the Casa ES automation."
+        ]
+      }],
+      "readme": null
+    },
+    {
+      "id": "casa-es-battery-check",
+      "name": "Casa ES Batterie Scariche",
+      "version": "2.0.0",
+      "author": "Casa ES",
+      "description": "Trova e mostra automaticamente le batterie scariche dei dispositivi Home Assistant.",
+      "sdkVersion": "^1.2.0",
+      "hasSettings": true,
+      "path": "cards/casa-es-battery-check",
+      "entry": "cards/casa-es-battery-check/dist/casa-es-battery-check.js",
+      "settings": "cards/casa-es-battery-check/dist/casa-es-battery-check.settings.js",
+      "manifest": "cards/casa-es-battery-check/manifest.json",
+      "preview": null,
+      "previews": null,
+      "thumbnail": null,
+      "logo": null,
+      "tags": ["home", "battery", "maintenance", "sensors"],
+      "package": null,
+      "tier": "free",
+      "changelog": [{
+        "version": "2.0.0",
+        "date": "2026-09-12",
+        "changes": [
+          "Automatic discovery of Home Assistant battery sensors.",
+          "Configurable low-battery threshold and detailed device list.",
+          "Exclusion of photovoltaic storage batteries by default."
+        ]
+      }],
       "readme": null
     }
   ]
