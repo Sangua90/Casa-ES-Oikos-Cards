@@ -6,7 +6,7 @@ Repository delle card OIKOS personalizzate di Casa ES.
 
 - **Casa ES Portone Garage**: card JAVA con stato live e pulsanti Apri, Stop e Chiudi.
 - **Casa ES Portone Garage Badge**: distintivo con lo stato di `cover.portone_garage`.
-- **Casa ES Raccolta Differenziata**: agenda dinamica basata su `calendar.raccolta_rifiuti`, con più raccolte nello stesso giorno e intervallo fino a 14 giorni.
+- **Casa ES Raccolta Differenziata**: mostra cosa esporre questa sera, tutte le raccolte dello stesso giorno e tre prossimi ritiri colorati.
 - **Casa ES Boiler**: temperatura attuale e colore dinamico quando il boiler sta scaldando.
 - **Casa ES Modalità Ospiti**: stato e comando di `input_boolean.modalita_ospite`.
 - **Casa ES Batterie Scariche**: individua automaticamente le batterie dei dispositivi sotto la soglia configurata.
@@ -23,7 +23,7 @@ Installa quindi la card desiderata.
 
 - Card JAVA: importa `packages/casa-es-garage-1.0.1.zip` da **Store → Comunità → JAVA → Carica ZIP**.
 - Distintivo: importa `packages/casa-es-garage-badge-1.0.0.zip` da **Store → Distintivi → Importa ZIP**.
-- Raccolta differenziata: importa `packages/casa-es-raccolta-1.0.0.zip` da **Store → Comunità → JAVA → Carica ZIP**.
+- Raccolta differenziata: importa `packages/casa-es-raccolta-1.1.0.zip` da **Store → Comunità → JAVA → Carica ZIP**.
 - Boiler: importa `packages/casa-es-boiler-1.0.0.zip` da **Store → Comunità → JAVA → Carica ZIP**.
 - Modalità ospiti: importa `packages/casa-es-ospiti-1.0.0.zip` da **Store → Comunità → JAVA → Carica ZIP**.
 - Batterie scariche: importa `packages/casa-es-battery-check-2.0.0.zip` da **Store → Comunità → JAVA → Carica ZIP**.

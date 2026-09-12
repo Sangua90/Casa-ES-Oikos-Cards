@@ -1,5 +1,5 @@
 # oikos:package_id: casa_es_raccolta_differenziata
-# oikos:package_version: 1.0.0
+# oikos:package_version: 1.1.0
 template:
   - trigger:
       - platform: homeassistant
@@ -28,7 +28,7 @@ template:
           updated_at: "{{ now().isoformat() }}"
           events: >-
             {% if raccolte_agenda is defined %}
-              {{ raccolte_agenda.get('calendar.raccolta_rifiuti', {}).get('events', []) }}
+              {{ raccolte_agenda.get('calendar.raccolta_rifiuti', {}).get('events', []) | to_json }}
             {% else %}
-              {{ [] }}
+              {{ [] | to_json }}
             {% endif %}

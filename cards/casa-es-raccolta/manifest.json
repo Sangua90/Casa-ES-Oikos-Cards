@@ -1,9 +1,9 @@
 {
   "id": "casa-es-raccolta",
   "name": "Casa ES Raccolta Differenziata",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Casa ES",
-  "description": "Raccolte reali dal calendario Home Assistant, con più rifiuti nello stesso giorno e agenda fino a 14 giorni.",
+  "description": "Mostra cosa esporre questa sera e tre prossimi ritiri dal calendario Home Assistant.",
   "sdkVersion": "^1.2.0",
   "hasSettings": true,
   "entry": "dist/casa-es-raccolta.js",

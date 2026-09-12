@@ -23,8 +23,6 @@ registerCardTranslations('card-casa-es-raccolta', { it, en })
 const DEFAULT = {
   calendarId: 'calendar.raccolta_rifiuti',
   sensorId: 'sensor.casa_es_raccolta_differenziata',
-  days: 7,
-  compact: false,
 }
 
 function parseEvents(value) {
@@ -91,7 +89,6 @@ export default function CasaEsRaccolta({ cardId = 'casa-es-raccolta' }) {
 
   const model = useMemo(() => {
     const today = dayStart(new Date())
-    const range = Number(config.days) || 7
     const parsed = parseEvents(sensorEvents)
     const source = parsed.length
       ? parsed
@@ -101,12 +98,12 @@ export default function CasaEsRaccolta({ cardId = 'casa-es-raccolta' }) {
 
     const events = source
       .map(event => ({
-        summary: event.summary || event.message || '',
+        summary: String(event.summary || event.message || '').trim(),
         start: localDate(event.start || event.start_time),
       }))
       .filter(event => event.summary && event.start)
       .map(event => ({ ...event, offset: dayDiff(event.start, today) }))
-      .filter(event => event.offset >= 0 && event.offset < range)
+      .filter(event => event.offset >= 1 && event.offset <= 15)
       .sort((a, b) => a.start.getTime() - b.start.getTime() || a.summary.localeCompare(b.summary))
 
     const groups = []
@@ -117,27 +114,24 @@ export default function CasaEsRaccolta({ cardId = 'casa-es-raccolta' }) {
         group = { key, date: event.start, offset: event.offset, events: [] }
         groups.push(group)
       }
-      group.events.push(event)
+      const normalised = event.summary.toLocaleLowerCase('it')
+      if (!group.events.some(item => item.summary.toLocaleLowerCase('it') === normalised)) {
+        group.events.push(event)
+      }
     }
-    return { groups, limited: !parsed.length && Boolean(calendarSummary && calendarStart) }
-  }, [calendarStart, calendarSummary, config.days, sensorEvents, sensorState])
 
-  const dayLabel = group => {
-    if (group.offset === 0) return t('today')
-    if (group.offset === 1) return t('tomorrow')
-    return group.date.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' })
-  }
+    return {
+      tonight: groups.find(group => group.offset === 1) || null,
+      upcoming: groups.filter(group => group.offset > 1).slice(0, 3),
+      limited: !parsed.length && Boolean(calendarSummary && calendarStart),
+    }
+  }, [calendarStart, calendarSummary, sensorEvents, sensorState])
 
-  const countdown = offset => {
-    if (offset === 0) return t('today')
-    if (offset === 1) return t('tomorrow')
-    return t('inDays', { count: offset })
-  }
-
-  const first = model.groups[0]?.events[0]
-  const firstVisual = getVisual(wasteKind(first?.summary), s.tokens)
-  const FirstIcon = firstVisual.Icon
-  const gap = config.compact ? s.tokens.space.sm : s.tokens.space.md
+  const collectionDate = date => date.toLocaleDateString(undefined, {
+    weekday: 'short',
+    day: 'numeric',
+    month: 'short',
+  })
 
   return (
     <div
@@ -147,7 +141,7 @@ export default function CasaEsRaccolta({ cardId = 'casa-es-raccolta' }) {
         minWidth: 0,
         display: 'flex',
         flexDirection: 'column',
-        gap,
+        gap: s.tokens.space.md,
       }}
     >
       <button
@@ -161,86 +155,114 @@ export default function CasaEsRaccolta({ cardId = 'casa-es-raccolta' }) {
             {t('title')}
           </span>
         </span>
-        {model.groups.length > 0 && <span style={s.badgeGreen}>{countdown(model.groups[0].offset)}</span>}
+        {model.tonight && <span style={s.badgeGreen}>{t('tonight')}</span>}
       </button>
 
-      {first ? (
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: s.tokens.space.md,
-            padding: s.tokens.space.md,
-            borderRadius: s.tokens.radius.md,
-            background: `color-mix(in srgb, ${firstVisual.color} 12%, var(--bg-card))`,
-            border: `1px solid color-mix(in srgb, ${firstVisual.color} 35%, ${s.tokens.color.border})`,
-          }}
-        >
-          <span
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: s.tokens.space.md,
+          padding: s.tokens.space.md,
+          borderRadius: s.tokens.radius.lg,
+          background: 'var(--bg-card)',
+          border: `1px solid ${s.tokens.color.border}`,
+          minWidth: 0,
+        }}
+      >
+        <span style={s.label}>{t('exposeTonight')}</span>
+
+        {model.tonight ? (
+          <div
             style={{
-              width: 44,
-              height: 44,
-              flexShrink: 0,
-              borderRadius: s.tokens.radius.md,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: firstVisual.color,
-              background: `color-mix(in srgb, ${firstVisual.color} 14%, transparent)`,
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(132px, 1fr))',
+              gap: s.tokens.space.sm,
+              minWidth: 0,
             }}
           >
-            <FirstIcon size={24} />
-          </span>
-          <span style={{ ...s.grow, minWidth: 0 }}>
-            <span style={{ ...s.label, display: 'block', marginBottom: s.tokens.space.xs, color: firstVisual.color }}>
-              {t('nextCollection')}
-            </span>
-            <span style={{ ...s.title, display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-              {model.groups[0].events.map(event => event.summary).join(' · ')}
-            </span>
-          </span>
-        </div>
-      ) : (
-        <div style={{ ...s.colTight, color: s.tokens.color.muted }}>
-          <span style={s.title}>{t('noCollections')}</span>
-          <span style={s.hint}>{t('noCollectionsHint')}</span>
-        </div>
-      )}
+            {model.tonight.events.map((event, index) => {
+              const visual = getVisual(wasteKind(event.summary), s.tokens)
+              const Icon = visual.Icon
+              return (
+                <div
+                  key={`${event.summary}-${index}`}
+                  style={{
+                    ...s.row,
+                    minWidth: 0,
+                    padding: s.tokens.space.md,
+                    borderRadius: s.tokens.radius.md,
+                    color: visual.color,
+                    background: `color-mix(in srgb, ${visual.color} 12%, transparent)`,
+                  }}
+                >
+                  <span
+                    style={{
+                      width: 40,
+                      height: 40,
+                      flexShrink: 0,
+                      borderRadius: s.tokens.radius.md,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      background: `color-mix(in srgb, ${visual.color} 14%, transparent)`,
+                    }}
+                  >
+                    <Icon size={22} />
+                  </span>
+                  <span style={{ ...s.title, color: visual.color, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    {event.summary}
+                  </span>
+                </div>
+              )
+            })}
+          </div>
+        ) : (
+          <span style={{ ...s.body, color: s.tokens.color.muted }}>{t('nothingTonight')}</span>
+        )}
 
-      {model.groups.length > 0 && (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: s.tokens.space.xs }}>
-          {model.groups.map(group => (
-            <div key={group.key} style={{ ...s.rowBetween, gap: s.tokens.space.sm, minWidth: 0 }}>
-              <span style={{ ...s.hint, minWidth: 72, color: group.offset < 2 ? s.tokens.color.primary : s.tokens.color.muted }}>
-                {dayLabel(group)}
-              </span>
-              <span style={{ ...s.row, justifyContent: 'flex-end', flexWrap: 'wrap', minWidth: 0 }}>
-                {group.events.map((event, index) => {
-                  const visual = getVisual(wasteKind(event.summary), s.tokens)
-                  const Icon = visual.Icon
-                  return (
-                    <span
-                      key={`${event.summary}-${index}`}
-                      style={{
-                        ...s.badgeGreen,
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: s.tokens.space.xs,
-                        color: visual.color,
-                        background: `color-mix(in srgb, ${visual.color} 11%, transparent)`,
-                        border: `1px solid color-mix(in srgb, ${visual.color} 28%, transparent)`,
-                      }}
-                    >
-                      <Icon size={12} />
-                      {event.summary}
-                    </span>
-                  )
-                })}
-              </span>
-            </div>
-          ))}
-        </div>
-      )}
+        {model.upcoming.length > 0 && (
+          <div
+            aria-label={t('upcomingCollections')}
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(104px, 1fr))',
+              gap: s.tokens.space.sm,
+              paddingTop: s.tokens.space.md,
+              borderTop: `1px solid ${s.tokens.color.border}`,
+              minWidth: 0,
+            }}
+          >
+            {model.upcoming.map(group => (
+              <div key={group.key} style={{ ...s.colTight, minWidth: 0 }}>
+                <span style={{ ...s.hint, textTransform: 'capitalize' }}>{collectionDate(group.date)}</span>
+                <span style={{ ...s.row, flexWrap: 'wrap', gap: s.tokens.space.xs, minWidth: 0 }}>
+                  {group.events.map((event, index) => {
+                    const visual = getVisual(wasteKind(event.summary), s.tokens)
+                    return (
+                      <span
+                        key={`${event.summary}-${index}`}
+                        style={{
+                          ...s.badgeGreen,
+                          color: visual.color,
+                          background: `color-mix(in srgb, ${visual.color} 12%, transparent)`,
+                          border: `1px solid color-mix(in srgb, ${visual.color} 28%, transparent)`,
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          whiteSpace: 'nowrap',
+                          maxWidth: '100%',
+                        }}
+                      >
+                        {event.summary}
+                      </span>
+                    )
+                  })}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
 
       {model.limited && <span style={{ ...s.hint, color: s.tokens.color.amber }}>{t('limitedMode')}</span>}
     </div>

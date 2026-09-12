@@ -2,10 +2,7 @@ import {
   EntityField,
   Field,
   PackageSection,
-  Pills,
   Section,
-  SettingsRow,
-  Toggle,
   registerCardTranslations,
   useCardConfig,
   usePackageInstaller,
@@ -20,21 +17,12 @@ registerCardTranslations('card-casa-es-raccolta', { it, en })
 const DEFAULT = {
   calendarId: 'calendar.raccolta_rifiuti',
   sensorId: 'sensor.casa_es_raccolta_differenziata',
-  days: 7,
-  compact: false,
 }
 
 export default function CasaEsRaccoltaSettings({ cardId }) {
   const { t } = useT('card-casa-es-raccolta')
   const [config, setConfig] = useCardConfig(cardId, DEFAULT, { version: 1 })
   const pkg = usePackageInstaller({ name: 'casa_es_raccolta_differenziata', yaml: TPL })
-  const set = (key, value) => setConfig(previous => ({ ...previous, [key]: value }))
-  const dayOptions = [
-    { value: 3, label: t('days3') },
-    { value: 7, label: t('days7') },
-    { value: 14, label: t('days14') },
-  ]
-
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
       <PackageSection
@@ -59,12 +47,6 @@ export default function CasaEsRaccoltaSettings({ cardId }) {
             filterDomain="sensor"
           />
         </Field>
-        <Field label={t('rangeLabel')}>
-          <Pills options={dayOptions} value={config.days} onChange={value => set('days', value)} />
-        </Field>
-        <SettingsRow label={t('compactLabel')} hint={t('compactHint')}>
-          <Toggle value={config.compact} onChange={value => set('compact', value)} />
-        </SettingsRow>
       </Section>
     </div>
   )

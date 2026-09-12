@@ -1,6 +1,6 @@
 {
   "repo": "Sangua90/Casa-ES-Oikos-Cards",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "sdkVersion": "1.2.0",
   "updated": "2026-09-12",
   "cards": [
@@ -41,9 +41,9 @@
     {
       "id": "casa-es-raccolta",
       "name": "Casa ES Raccolta Differenziata",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "Casa ES",
-      "description": "Raccolte reali dal calendario Home Assistant, con più rifiuti nello stesso giorno e agenda fino a 14 giorni.",
+      "description": "Mostra cosa esporre questa sera e tre prossimi ritiri dal calendario Home Assistant.",
       "sdkVersion": "^1.2.0",
       "hasSettings": true,
       "path": "cards/casa-es-raccolta",
@@ -58,6 +58,16 @@
       "package": null,
       "tier": "free",
       "changelog": [
+        {
+          "version": "1.1.0",
+          "date": "2026-09-12",
+          "changes": [
+            "Shows tomorrow's collections as the waste to put out tonight.",
+            "Displays every waste type scheduled for the same collection day.",
+            "Replaces the weekly agenda with three compact, colour-coded upcoming collections.",
+            "Keeps all content inside one Oikos-themed panel."
+          ]
+        },
         {
           "version": "1.0.0",
           "date": "2026-09-12",
