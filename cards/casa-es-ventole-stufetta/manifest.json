@@ -1,0 +1,19 @@
+{
+  "id": "casa-es-ventole-stufetta",
+  "name": "Casa ES Ventole e Stufetta",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Comando riutilizzabile per ventole e stufette con stato e colore dinamici.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": true,
+  "entry": "dist/casa-es-ventole-stufetta.js",
+  "settings": "dist/casa-es-ventole-stufetta.settings.js",
+  "tags": [
+    "home",
+    "fan",
+    "heater",
+    "controls"
+  ],
+  "configVersion": 1,
+  "defaultWidth": "half"
+}

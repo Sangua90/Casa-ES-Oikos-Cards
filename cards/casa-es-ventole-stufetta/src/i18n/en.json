@@ -1,0 +1,21 @@
+{
+  "noEntity": "Configure a switch entity in the card settings",
+  "defaultFanLabel": "Fan",
+  "defaultHeaterLabel": "Heater",
+  "stateOn": "On",
+  "stateOff": "Off",
+  "stateUnavailable": "Unavailable",
+  "stateUnknown": "Unknown state",
+  "turnOn": "Turn on",
+  "turnOff": "Turn off",
+  "settingsTitle": "Device",
+  "entityLabel": "Entity",
+  "entityHint": "Select the fan or heater to control.",
+  "typeLabel": "Type",
+  "typeHint": "Sets the card icon and active color.",
+  "typeFan": "Fan",
+  "typeHeater": "Heater",
+  "labelLabel": "Custom name",
+  "labelHint": "Leave empty to use the Home Assistant name.",
+  "labelPlaceholder": "E.g. Upstairs fan"
+}

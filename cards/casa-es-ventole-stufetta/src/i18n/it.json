@@ -1,0 +1,21 @@
+{
+  "noEntity": "Configura un'entità switch nelle impostazioni della card",
+  "defaultFanLabel": "Ventola",
+  "defaultHeaterLabel": "Stufetta",
+  "stateOn": "Accesa",
+  "stateOff": "Spenta",
+  "stateUnavailable": "Non disponibile",
+  "stateUnknown": "Stato sconosciuto",
+  "turnOn": "Accendi",
+  "turnOff": "Spegni",
+  "settingsTitle": "Dispositivo",
+  "entityLabel": "Entità",
+  "entityHint": "Seleziona la ventola o la stufetta da controllare.",
+  "typeLabel": "Tipo",
+  "typeHint": "Imposta icona e colore della card.",
+  "typeFan": "Ventola",
+  "typeHeater": "Stufetta",
+  "labelLabel": "Nome personalizzato",
+  "labelHint": "Lascia vuoto per usare il nome di Home Assistant.",
+  "labelPlaceholder": "Es. Ventola P1"
+}
