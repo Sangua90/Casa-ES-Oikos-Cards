@@ -1,0 +1,14 @@
+{
+  "id": "casa-es-boiler",
+  "name": "Casa ES Boiler",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Temperatura attuale del boiler Ariston con colore dinamico durante il riscaldamento.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": true,
+  "entry": "dist/casa-es-boiler.js",
+  "settings": "dist/casa-es-boiler.settings.js",
+  "tags": ["home", "boiler", "water-heater", "temperature"],
+  "configVersion": 1,
+  "defaultWidth": "half"
+}
