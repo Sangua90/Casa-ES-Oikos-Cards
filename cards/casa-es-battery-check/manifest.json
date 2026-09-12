@@ -1,0 +1,14 @@
+{
+  "id": "casa-es-battery-check",
+  "name": "Casa ES Batterie Scariche",
+  "version": "2.0.0",
+  "author": "Casa ES",
+  "description": "Trova e mostra automaticamente le batterie scariche dei dispositivi Home Assistant.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": true,
+  "entry": "dist/casa-es-battery-check.js",
+  "settings": "dist/casa-es-battery-check.settings.js",
+  "tags": ["home", "battery", "maintenance", "sensors"],
+  "configVersion": 2,
+  "defaultWidth": "lg"
+}
