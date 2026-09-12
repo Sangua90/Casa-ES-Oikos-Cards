@@ -1,0 +1,34 @@
+# oikos:package_id: casa_es_raccolta_differenziata
+# oikos:package_version: 1.0.0
+template:
+  - trigger:
+      - platform: homeassistant
+        event: start
+      - platform: time_pattern
+        minutes: "/30"
+    action:
+      - action: calendar.get_events
+        target:
+          entity_id: calendar.raccolta_rifiuti
+        data:
+          start_date_time: "{{ now().isoformat() }}"
+          end_date_time: "{{ (now() + timedelta(days=15)).isoformat() }}"
+        response_variable: raccolte_agenda
+    sensor:
+      - name: "Casa ES Raccolta Differenziata"
+        unique_id: casa_es_raccolta_differenziata
+        state: >-
+          {% if raccolte_agenda is defined %}
+            {{ raccolte_agenda.get('calendar.raccolta_rifiuti', {}).get('events', []) | count }}
+          {% else %}
+            0
+          {% endif %}
+        attributes:
+          calendar_entity: "calendar.raccolta_rifiuti"
+          updated_at: "{{ now().isoformat() }}"
+          events: >-
+            {% if raccolte_agenda is defined %}
+              {{ raccolte_agenda.get('calendar.raccolta_rifiuti', {}).get('events', []) }}
+            {% else %}
+              {{ [] }}
+            {% endif %}

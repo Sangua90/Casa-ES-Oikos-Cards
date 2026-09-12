@@ -1,8 +1,8 @@
 {
   "repo": "Sangua90/Casa-ES-Oikos-Cards",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "sdkVersion": "1.2.0",
-  "updated": "2026-09-11",
+  "updated": "2026-09-12",
   "cards": [
     {
       "id": "casa-es-garage",
@@ -33,6 +33,40 @@
             "Conferme di sicurezza configurabili.",
             "Entità cover e nome personalizzabili.",
             "Traduzioni italiano e inglese."
+          ]
+        }
+      ],
+      "readme": null
+    },
+    {
+      "id": "casa-es-raccolta",
+      "name": "Casa ES Raccolta Differenziata",
+      "version": "1.0.0",
+      "author": "Casa ES",
+      "description": "Raccolte reali dal calendario Home Assistant, con più rifiuti nello stesso giorno e agenda fino a 14 giorni.",
+      "sdkVersion": "^1.2.0",
+      "hasSettings": true,
+      "path": "cards/casa-es-raccolta",
+      "entry": "cards/casa-es-raccolta/dist/casa-es-raccolta.js",
+      "settings": "cards/casa-es-raccolta/dist/casa-es-raccolta.settings.js",
+      "manifest": "cards/casa-es-raccolta/manifest.json",
+      "preview": null,
+      "previews": null,
+      "thumbnail": null,
+      "logo": null,
+      "tags": ["home", "calendar", "waste", "recycling"],
+      "package": null,
+      "tier": "free",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-09-12",
+          "changes": [
+            "Reads scheduled collections from calendar.raccolta_rifiuti.",
+            "Supports multiple collections on the same day and irregular dates.",
+            "Shows today, tomorrow and the next 3, 7 or 14 days.",
+            "Includes an installable Home Assistant package for the future-events sensor.",
+            "Recognises Sterpaglie, Umido, Carta, Vetro, Indifferenziata and Plastica."
           ]
         }
       ],
