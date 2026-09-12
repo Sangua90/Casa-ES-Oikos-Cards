@@ -1,0 +1,14 @@
+{
+  "id": "casa-es-ospiti",
+  "name": "Casa ES Modalità Ospiti",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Comando e stato della modalità ospiti con promemoria Home Assistant.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": true,
+  "entry": "dist/casa-es-ospiti.js",
+  "settings": "dist/casa-es-ospiti.settings.js",
+  "tags": ["home", "guests", "mode", "controls"],
+  "configVersion": 1,
+  "defaultWidth": "half"
+}
