@@ -1,0 +1,19 @@
+{
+  "id": "casa-es-garage",
+  "name": "Casa ES Portone Garage",
+  "version": "1.0.1",
+  "author": "Casa ES",
+  "description": "Controllo sicuro del portone garage con stato live e comandi Apri, Stop e Chiudi.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": true,
+  "entry": "dist/casa-es-garage.js",
+  "settings": "dist/casa-es-garage.settings.js",
+  "tags": [
+    "home",
+    "garage",
+    "security",
+    "controls"
+  ],
+  "configVersion": 1,
+  "defaultWidth": "half"
+}

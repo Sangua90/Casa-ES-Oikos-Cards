@@ -1,0 +1,24 @@
+{
+  "id": "casa-es-garage-badge",
+  "name": "Casa ES Portone Garage",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Distintivo OIKOS con lo stato live del portone garage.",
+  "config": {
+    "entity": "cover.portone_garage",
+    "icon": "mdiGarage",
+    "label": "GARAGE",
+    "color": "amber",
+    "size": "md",
+    "displayMode": "full",
+    "pulse": false,
+    "template": "{value}",
+    "format": "state",
+    "decimals": 0,
+    "unit": "",
+    "tap_action": {
+      "action": "more-info",
+      "target": ""
+    }
+  }
+}
