@@ -1,6 +1,6 @@
 # Changelog — Casa ES Consumo Casa
 
-## [1.0.0] - 2026-09-13
+## [4.0.0] - 2026-09-13
 ### Added
 - Live total home consumption.
 - Configurable blue, amber and red thresholds.

@@ -23,5 +23,5 @@ jobs:
           fail_on_unmatched_files: true
           files: |
             manifest.json
+            cards/*/manifest.json
             cards/*/dist/**
-            packages/*.zip

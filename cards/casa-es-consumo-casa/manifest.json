@@ -1,7 +1,7 @@
 {
   "id": "casa-es-consumo-casa",
   "name": "Casa ES Consumo Casa",
-  "version": "1.0.1",
+  "version": "4.0.0",
   "author": "Casa ES",
   "description": "Box OIKOS per il consumo totale istantaneo della casa.",
   "sdkVersion": "^1.2.0",
@@ -14,6 +14,5 @@
     "power"
   ],
   "configVersion": 1,
-  "defaultWidth": "half",
-  "type": "card"
+  "defaultWidth": "half"
 }
