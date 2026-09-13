@@ -1,15 +1,15 @@
 {
   "repo": "Sangua90/Casa-ES-Oikos-Cards",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "sdkVersion": "1.2.0",
-  "updated": "2026-09-12",
+  "updated": "2026-09-13",
   "cards": [
     {
       "id": "casa-es-ventole-stufetta",
       "name": "Casa ES Ventole e Stufetta",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "Casa ES",
-      "description": "Comando riutilizzabile per ventole e stufette con stato e colore dinamici.",
+      "description": "Controlla ventole switch e stufette comandate da due script, con stato e colore dinamici.",
       "sdkVersion": "^1.2.0",
       "hasSettings": true,
       "path": "cards/casa-es-ventole-stufetta",
@@ -23,15 +23,26 @@
       "tags": ["home", "fan", "heater", "controls"],
       "package": null,
       "tier": "free",
-      "changelog": [{
-        "version": "1.0.0",
-        "date": "2026-09-12",
-        "changes": [
-          "Reusable switch card for fans and portable heaters.",
-          "Configurable entity, label and device type.",
-          "Live state, themed active color and Home Assistant more-info shortcut."
-        ]
-      }],
+      "changelog": [
+        {
+          "version": "1.1.0",
+          "date": "2026-09-13",
+          "changes": [
+            "Separate Home Assistant scripts for turning a heater on and off.",
+            "Green heater card while on and red heater card while off.",
+            "Optional live state entity with a persistent last-command fallback."
+          ]
+        },
+        {
+          "version": "1.0.0",
+          "date": "2026-09-12",
+          "changes": [
+            "Reusable switch card for fans and portable heaters.",
+            "Configurable entity, label and device type.",
+            "Live state, themed active color and Home Assistant more-info shortcut."
+          ]
+        }
+      ],
       "readme": null
     },
     {

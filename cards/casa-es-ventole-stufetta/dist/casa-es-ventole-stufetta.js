@@ -1,65 +1,111 @@
-const { jsx: a, jsxs: d } = window.__OIKOS_SDK__.jsxRuntime, H = "Configura un'entità switch nelle impostazioni della card", L = "Ventola", $ = "Stufetta", x = "Accesa", _ = "Spenta", I = "Non disponibile", T = "Stato sconosciuto", U = "Accendi", C = "Spegni", F = "Dispositivo", E = "Entità", D = "Seleziona la ventola o la stufetta da controllare.", K = "Tipo", P = "Imposta icona e colore della card.", z = "Ventola", A = "Stufetta", j = "Nome personalizzato", V = "Lascia vuoto per usare il nome di Home Assistant.", B = "Es. Ventola P1", R = {
-  noEntity: H,
-  defaultFanLabel: L,
-  defaultHeaterLabel: $,
-  stateOn: x,
-  stateOff: _,
-  stateUnavailable: I,
-  stateUnknown: T,
-  turnOn: U,
-  turnOff: C,
-  settingsTitle: F,
-  entityLabel: E,
-  entityHint: D,
-  typeLabel: K,
-  typeHint: P,
-  typeFan: z,
-  typeHeater: A,
-  labelLabel: j,
-  labelHint: V,
-  labelPlaceholder: B
-}, W = "Configure a switch entity in the card settings", N = "Fan", G = "Heater", M = "On", q = "Off", J = "Unavailable", Q = "Unknown state", X = "Turn on", Y = "Turn off", Z = "Device", tt = "Entity", et = "Select the fan or heater to control.", nt = "Type", at = "Sets the card icon and active color.", ot = "Fan", st = "Heater", lt = "Custom name", it = "Leave empty to use the Home Assistant name.", rt = "E.g. Upstairs fan", ct = {
-  noEntity: W,
-  defaultFanLabel: N,
-  defaultHeaterLabel: G,
-  stateOn: M,
-  stateOff: q,
-  stateUnavailable: J,
-  stateUnknown: Q,
-  turnOn: X,
-  turnOff: Y,
-  settingsTitle: Z,
-  entityLabel: tt,
-  entityHint: et,
-  typeLabel: nt,
-  typeHint: at,
-  typeFan: ot,
-  typeHeater: st,
-  labelLabel: lt,
-  labelHint: it,
-  labelPlaceholder: rt
-}, { useState: dt } = window.__OIKOS_SDK__.React, { Fan: bt, Heater: ut, Loader2: yt, Power: ft } = window.__OIKOS_SDK__.icons, { registerCardTranslations: pt, useCardConfig: ht, useDashboard: mt, useStyles: gt, useT: wt } = window.__OIKOS_SDK__;
-pt("card-casa-es-ventole-stufetta", { it: R, en: ct });
-const vt = {
+const { jsx: o, jsxs: r } = window.__OIKOS_SDK__.jsxRuntime, U = "Configura l'entità switch della ventola", z = "Configura gli script Accendi e Spegni della stufetta", D = "Ventola", P = "Stufetta", B = "Accesa", K = "Spenta", j = "Non disponibile", V = "Stato sconosciuto", W = "Accendi", N = "Spegni", R = "Dispositivo", G = "Entità", q = "Seleziona la ventola o la stufetta da controllare.", M = "Tipo", J = "Imposta icona e colore della card.", Q = "Ventola", X = "Stufetta", Y = "Nome personalizzato", Z = "Lascia vuoto per usare il nome di Home Assistant.", tt = "Es. Ventola P1", et = "Script Accendi", nt = "Script Home Assistant che accende la stufetta.", at = "Script Spegni", ot = "Script Home Assistant che spegne la stufetta.", st = "Entità stato reale (facoltativa)", it = "Seleziona l'entità che vale on quando la stufetta è accesa. Se la lasci vuota, la card ricorda l'ultimo comando.", rt = {
+  noFanEntity: U,
+  noHeaterScripts: z,
+  defaultFanLabel: D,
+  defaultHeaterLabel: P,
+  stateOn: B,
+  stateOff: K,
+  stateUnavailable: j,
+  stateUnknown: V,
+  turnOn: W,
+  turnOff: N,
+  settingsTitle: R,
+  entityLabel: G,
+  entityHint: q,
+  typeLabel: M,
+  typeHint: J,
+  typeFan: Q,
+  typeHeater: X,
+  labelLabel: Y,
+  labelHint: Z,
+  labelPlaceholder: tt,
+  heaterOnScriptLabel: et,
+  heaterOnScriptHint: nt,
+  heaterOffScriptLabel: at,
+  heaterOffScriptHint: ot,
+  heaterStateLabel: st,
+  heaterStateHint: it
+}, lt = "Configure the fan switch entity", ct = "Configure the heater On and Off scripts", dt = "Fan", ft = "Heater", ut = "On", pt = "Off", ht = "Unavailable", bt = "Unknown state", yt = "Turn on", St = "Turn off", mt = "Device", Ot = "Entity", gt = "Select the fan or heater to control.", Ht = "Type", vt = "Sets the card icon and active color.", wt = "Fan", kt = "Heater", Lt = "Custom name", $t = "Leave empty to use the Home Assistant name.", xt = "E.g. Upstairs fan", _t = "Turn-on script", Ct = "Home Assistant script that turns the heater on.", It = "Turn-off script", Tt = "Home Assistant script that turns the heater off.", Et = "Live state entity (optional)", Ft = "Select the entity that is on while the heater is running. If left empty, the card remembers the last command.", At = {
+  noFanEntity: lt,
+  noHeaterScripts: ct,
+  defaultFanLabel: dt,
+  defaultHeaterLabel: ft,
+  stateOn: ut,
+  stateOff: pt,
+  stateUnavailable: ht,
+  stateUnknown: bt,
+  turnOn: yt,
+  turnOff: St,
+  settingsTitle: mt,
+  entityLabel: Ot,
+  entityHint: gt,
+  typeLabel: Ht,
+  typeHint: vt,
+  typeFan: wt,
+  typeHeater: kt,
+  labelLabel: Lt,
+  labelHint: $t,
+  labelPlaceholder: xt,
+  heaterOnScriptLabel: _t,
+  heaterOnScriptHint: Ct,
+  heaterOffScriptLabel: It,
+  heaterOffScriptHint: Tt,
+  heaterStateLabel: Et,
+  heaterStateHint: Ft
+}, { useState: Ut } = window.__OIKOS_SDK__.React, { Fan: zt, Heater: Dt, Loader2: H, Power: b } = window.__OIKOS_SDK__.icons, { registerCardTranslations: Pt, useCardConfig: Bt, useDashboard: Kt, useStyles: jt, useT: Vt } = window.__OIKOS_SDK__;
+Pt("card-casa-es-ventole-stufetta", { it: rt, en: At });
+const Wt = {
   entityId: "",
   label: "",
-  deviceType: "fan"
-};
-function Ot({ cardId: y = "casa-es-ventole-stufetta" }) {
-  const t = gt(), { t: i } = wt("card-casa-es-ventole-stufetta"), { getState: f, getAttr: p, callService: h, openMoreInfo: m } = mt(), [n] = ht(y, vt, { version: 1 }), [r, u] = dt(!1), c = n.entityId ? f(n.entityId) : null, g = n.entityId ? p(n.entityId, "friendly_name") : null;
-  if (!n.entityId)
-    return /* @__PURE__ */ a("div", { style: { ...t.card, color: t.tokens.color.muted, ...t.tokens.font.hint, fontStyle: "italic" }, children: i("noEntity") });
-  const e = c === "on", o = c === "unavailable" || c === "unknown" || c == null, b = n.deviceType === "heater", w = b ? ut : bt, s = b ? t.tokens.color.amber : t.tokens.color.blue, l = o ? t.tokens.color.muted : e ? s : t.tokens.color.muted, v = n.label || g || i(b ? "defaultHeaterLabel" : "defaultFanLabel"), O = i(o ? c === "unavailable" ? "stateUnavailable" : "stateUnknown" : e ? "stateOn" : "stateOff"), k = async () => {
-    if (!(r || o)) {
-      u(!0);
+  deviceType: "fan",
+  heaterOnScript: "",
+  heaterOffScript: "",
+  heaterStateEntity: "",
+  heaterAssumedOn: !1
+}, Nt = ["on", "true", "home", "heat", "heating", "active", "running"];
+function Gt({ cardId: v = "casa-es-ventole-stufetta" }) {
+  const t = jt(), { t: l } = Vt("card-casa-es-ventole-stufetta"), { getState: y, getAttr: w, callService: S, openMoreInfo: k } = Kt(), [e, L] = Bt(v, Wt, { version: 2 }), [s, p] = Ut(!1), n = e.deviceType === "heater", u = e.entityId ? y(e.entityId) : null, $ = e.heaterStateEntity ? y(e.heaterStateEntity) : null, x = !n && e.entityId ? w(e.entityId, "friendly_name") : null, m = String($ ?? "").toLowerCase(), _ = !!e.heaterStateEntity && !["", "unknown", "unavailable"].includes(m), a = n ? _ ? Nt.includes(m) : !!e.heaterAssumedOn : u === "on", c = !n && (u === "unavailable" || u === "unknown" || u == null);
+  if (!(n ? !!(e.heaterOnScript && e.heaterOffScript) : !!e.entityId))
+    return /* @__PURE__ */ o("div", { style: { ...t.card, color: t.tokens.color.muted, ...t.tokens.font.hint, fontStyle: "italic" }, children: l(n ? "noHeaterScripts" : "noFanEntity") });
+  const C = n ? Dt : zt, I = n ? a ? t.tokens.color.green : t.tokens.color.red : a ? t.tokens.color.blue : t.tokens.color.muted, i = c ? t.tokens.color.muted : I, T = e.label || x || l(n ? "defaultHeaterLabel" : "defaultFanLabel"), E = l(c ? u === "unavailable" ? "stateUnavailable" : "stateUnknown" : a ? "stateOn" : "stateOff"), F = n ? e.heaterStateEntity || e.heaterOnScript : e.entityId, A = async () => {
+    if (!(s || c)) {
+      p(!0);
       try {
-        await Promise.resolve(h("switch", e ? "turn_off" : "turn_on", n.entityId)).catch((S) => console.error("[VentoleStufetta]", S));
+        await Promise.resolve(S("switch", a ? "turn_off" : "turn_on", e.entityId));
+      } catch (d) {
+        console.error("[VentoleStufetta]", d);
       } finally {
-        window.setTimeout(() => u(!1), 450);
+        window.setTimeout(() => p(!1), 450);
       }
     }
-  };
-  return /* @__PURE__ */ d(
+  }, O = async (d) => {
+    if (s) return;
+    const f = d ? e.heaterOnScript : e.heaterOffScript;
+    if (f) {
+      p(!0);
+      try {
+        await Promise.resolve(S("script", "turn_on", f)), L((h) => ({ ...h, heaterAssumedOn: d }));
+      } catch (h) {
+        console.error("[VentoleStufetta]", h);
+      } finally {
+        window.setTimeout(() => p(!1), 450);
+      }
+    }
+  }, g = (d, f) => ({
+    ...t.buttonGhost,
+    width: "100%",
+    minWidth: 0,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: t.tokens.space.sm,
+    cursor: s ? "not-allowed" : "pointer",
+    opacity: s ? 0.5 : 1,
+    color: f,
+    borderColor: d ? f : t.tokens.color.border,
+    background: d ? `color-mix(in srgb, ${f} 13%, transparent)` : void 0
+  });
+  return /* @__PURE__ */ r(
     "div",
     {
       style: {
@@ -69,18 +115,18 @@ function Ot({ cardId: y = "casa-es-ventole-stufetta" }) {
         display: "flex",
         flexDirection: "column",
         gap: t.tokens.space.lg,
-        background: e ? `color-mix(in srgb, ${s} 9%, var(--bg-card))` : "var(--bg-card)",
-        borderColor: e ? `color-mix(in srgb, ${s} 48%, ${t.tokens.color.border})` : t.tokens.color.border,
-        boxShadow: e ? `0 0 0 1px color-mix(in srgb, ${s} 16%, transparent)` : void 0,
+        background: `color-mix(in srgb, ${i} ${n ? 14 : a ? 9 : 4}%, var(--bg-card))`,
+        borderColor: `color-mix(in srgb, ${i} ${n ? 64 : a ? 48 : 24}%, ${t.tokens.color.border})`,
+        boxShadow: `0 0 0 1px color-mix(in srgb, ${i} ${n ? 20 : a ? 16 : 5}%, transparent)`,
         transition: "background 180ms ease, border-color 180ms ease, box-shadow 180ms ease"
       },
       children: [
-        /* @__PURE__ */ d("div", { style: t.rowBetween, children: [
-          /* @__PURE__ */ d(
+        /* @__PURE__ */ r("div", { style: t.rowBetween, children: [
+          /* @__PURE__ */ r(
             "button",
             {
               type: "button",
-              onClick: () => m(n.entityId),
+              onClick: () => k(F),
               style: {
                 ...t.iconButton,
                 display: "flex",
@@ -91,7 +137,7 @@ function Ot({ cardId: y = "casa-es-ventole-stufetta" }) {
                 textAlign: "left"
               },
               children: [
-                /* @__PURE__ */ a(
+                /* @__PURE__ */ o(
                   "span",
                   {
                     style: {
@@ -102,39 +148,21 @@ function Ot({ cardId: y = "casa-es-ventole-stufetta" }) {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      color: l,
-                      background: `color-mix(in srgb, ${l} 13%, transparent)`,
-                      border: `1px solid color-mix(in srgb, ${l} 35%, transparent)`
+                      color: i,
+                      background: `color-mix(in srgb, ${i} 13%, transparent)`,
+                      border: `1px solid color-mix(in srgb, ${i} 35%, transparent)`
                     },
-                    children: /* @__PURE__ */ a(
-                      w,
-                      {
-                        size: 26,
-                        style: e && !b ? { animation: "spin 2.4s linear infinite" } : void 0
-                      }
-                    )
+                    children: /* @__PURE__ */ o(C, { size: 26, style: a && !n ? { animation: "spin 2.4s linear infinite" } : void 0 })
                   }
                 ),
-                /* @__PURE__ */ d("span", { style: { ...t.grow, minWidth: 0 }, children: [
-                  /* @__PURE__ */ a(
-                    "span",
-                    {
-                      style: {
-                        ...t.title,
-                        display: "block",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        whiteSpace: "nowrap"
-                      },
-                      children: v
-                    }
-                  ),
-                  /* @__PURE__ */ a("span", { style: { ...t.label, display: "block", marginBottom: 0, marginTop: t.tokens.space.xs, color: l }, children: O })
+                /* @__PURE__ */ r("span", { style: { ...t.grow, minWidth: 0 }, children: [
+                  /* @__PURE__ */ o("span", { style: { ...t.title, display: "block", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }, children: T }),
+                  /* @__PURE__ */ o("span", { style: { ...t.label, display: "block", marginBottom: 0, marginTop: t.tokens.space.xs, color: i }, children: E })
                 ] })
               ]
             }
           ),
-          /* @__PURE__ */ a(
+          /* @__PURE__ */ o(
             "span",
             {
               "aria-hidden": "true",
@@ -143,35 +171,44 @@ function Ot({ cardId: y = "casa-es-ventole-stufetta" }) {
                 height: 12,
                 flexShrink: 0,
                 borderRadius: "50%",
-                background: l,
-                boxShadow: e ? `0 0 12px ${l}` : void 0,
-                opacity: o ? 0.45 : 1
+                background: i,
+                boxShadow: `0 0 12px ${i}`,
+                opacity: c ? 0.45 : 1
               }
             }
           )
         ] }),
-        /* @__PURE__ */ d(
+        n ? /* @__PURE__ */ r("div", { style: { display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: t.tokens.space.sm }, children: [
+          /* @__PURE__ */ r("button", { type: "button", onClick: () => O(!0), disabled: s, style: g(a, t.tokens.color.green), children: [
+            s ? /* @__PURE__ */ o(H, { size: 16, style: { animation: "spin 1.2s linear infinite" } }) : /* @__PURE__ */ o(b, { size: 16 }),
+            /* @__PURE__ */ o("span", { children: l("turnOn") })
+          ] }),
+          /* @__PURE__ */ r("button", { type: "button", onClick: () => O(!1), disabled: s, style: g(!a, t.tokens.color.red), children: [
+            /* @__PURE__ */ o(b, { size: 16 }),
+            /* @__PURE__ */ o("span", { children: l("turnOff") })
+          ] })
+        ] }) : /* @__PURE__ */ r(
           "button",
           {
             type: "button",
-            onClick: k,
-            disabled: r || o,
+            onClick: A,
+            disabled: s || c,
             style: {
-              ...e ? t.buttonGhost : t.buttonPrimary,
+              ...a ? t.buttonGhost : t.buttonPrimary,
               width: "100%",
               minWidth: 0,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               gap: t.tokens.space.sm,
-              cursor: r || o ? "not-allowed" : "pointer",
-              opacity: r || o ? 0.5 : 1,
-              color: e ? s : void 0,
-              borderColor: e ? s : void 0
+              cursor: s || c ? "not-allowed" : "pointer",
+              opacity: s || c ? 0.5 : 1,
+              color: a ? t.tokens.color.blue : void 0,
+              borderColor: a ? t.tokens.color.blue : void 0
             },
             children: [
-              r ? /* @__PURE__ */ a(yt, { size: 16, style: { animation: "spin 1.2s linear infinite" } }) : /* @__PURE__ */ a(ft, { size: 16 }),
-              /* @__PURE__ */ a("span", { children: i(e ? "turnOff" : "turnOn") })
+              s ? /* @__PURE__ */ o(H, { size: 16, style: { animation: "spin 1.2s linear infinite" } }) : /* @__PURE__ */ o(b, { size: 16 }),
+              /* @__PURE__ */ o("span", { children: l(a ? "turnOff" : "turnOn") })
             ]
           }
         )
@@ -180,5 +217,5 @@ function Ot({ cardId: y = "casa-es-ventole-stufetta" }) {
   );
 }
 export {
-  Ot as default
+  Gt as default
 };

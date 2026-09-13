@@ -1,5 +1,6 @@
 {
-  "noEntity": "Configure a switch entity in the card settings",
+  "noFanEntity": "Configure the fan switch entity",
+  "noHeaterScripts": "Configure the heater On and Off scripts",
   "defaultFanLabel": "Fan",
   "defaultHeaterLabel": "Heater",
   "stateOn": "On",
@@ -17,5 +18,11 @@
   "typeHeater": "Heater",
   "labelLabel": "Custom name",
   "labelHint": "Leave empty to use the Home Assistant name.",
-  "labelPlaceholder": "E.g. Upstairs fan"
+  "labelPlaceholder": "E.g. Upstairs fan",
+  "heaterOnScriptLabel": "Turn-on script",
+  "heaterOnScriptHint": "Home Assistant script that turns the heater on.",
+  "heaterOffScriptLabel": "Turn-off script",
+  "heaterOffScriptHint": "Home Assistant script that turns the heater off.",
+  "heaterStateLabel": "Live state entity (optional)",
+  "heaterStateHint": "Select the entity that is on while the heater is running. If left empty, the card remembers the last command."
 }
