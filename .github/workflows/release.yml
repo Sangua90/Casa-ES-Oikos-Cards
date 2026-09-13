@@ -24,5 +24,6 @@ jobs:
           files: |
             manifest.json
             cards/*/manifest.json
+            cards/*/manifest.json
             cards/*/dist/**
             packages/*.zip
