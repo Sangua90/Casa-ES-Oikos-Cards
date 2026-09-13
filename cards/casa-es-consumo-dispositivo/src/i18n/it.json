@@ -1,0 +1,17 @@
+{
+  "configure": "Seleziona il sensore di potenza nelle impostazioni",
+  "settings": "Consumo elettrodomestico",
+  "entity": "Sensore di potenza",
+  "entityHint": "Seleziona il sensore dell'elettrodomestico da mostrare.",
+  "label": "Nome visualizzato",
+  "labelHint": "Se vuoto usa automaticamente il nome dell'entità.",
+  "automatic": "Automatico",
+  "icon": "Icona",
+  "iconHint": "Se vuota usa l'icona dell'entità o una spina.",
+  "threshold": "Soglia di attivazione",
+  "thresholdHint": "Il dispositivo è attivo quando supera questo valore in watt.",
+  "visibility": "Visualizzazione",
+  "visibilityHint": "Nascondi il box sotto soglia oppure mostralo sempre in grigio.",
+  "activeOnly": "Solo attivo",
+  "always": "Sempre"
+}

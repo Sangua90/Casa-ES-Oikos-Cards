@@ -1,0 +1,12 @@
+{
+  "title": "Home Consumption",
+  "live": "Live power",
+  "settings": "Total home consumption",
+  "entity": "Power sensor",
+  "entityHint": "Sensor measuring the home's current total consumption.",
+  "label": "Displayed name",
+  "warning": "Amber threshold",
+  "warningHint": "The card turns amber above this watt value.",
+  "danger": "Red threshold",
+  "dangerHint": "The card turns red above this watt value."
+}

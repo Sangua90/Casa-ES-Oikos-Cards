@@ -1,0 +1,14 @@
+{
+  "id": "casa-es-consumo-dispositivo",
+  "name": "Casa ES Consumo Dispositivo",
+  "version": "1.0.0",
+  "author": "Casa ES",
+  "description": "Box riutilizzabile per mostrare la potenza di un singolo elettrodomestico.",
+  "sdkVersion": "^1.2.0",
+  "hasSettings": true,
+  "entry": "dist/casa-es-consumo-dispositivo.js",
+  "settings": "dist/casa-es-consumo-dispositivo.settings.js",
+  "tags": ["home", "energy", "power", "appliance"],
+  "configVersion": 1,
+  "defaultWidth": "half"
+}

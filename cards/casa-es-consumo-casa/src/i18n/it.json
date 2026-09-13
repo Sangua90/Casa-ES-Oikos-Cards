@@ -1,0 +1,12 @@
+{
+  "title": "Consumo Casa",
+  "live": "Potenza istantanea",
+  "settings": "Consumo totale della casa",
+  "entity": "Sensore di potenza",
+  "entityHint": "Sensore che misura il consumo totale istantaneo della casa.",
+  "label": "Nome visualizzato",
+  "warning": "Soglia arancione",
+  "warningHint": "Il box diventa arancione sopra questo valore in watt.",
+  "danger": "Soglia rossa",
+  "dangerHint": "Il box diventa rosso sopra questo valore in watt."
+}
