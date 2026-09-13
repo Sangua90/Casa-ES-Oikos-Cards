@@ -52,6 +52,13 @@ function dayDiff(date, today) {
   return Math.round((dayStart(date).getTime() - today.getTime()) / 86400000)
 }
 
+function splitWasteSummary(summary) {
+  return String(summary || '')
+    .split(/\s*(?:[·•,;\/]|\n)\s*/u)
+    .map(value => value.trim())
+    .filter(Boolean)
+}
+
 function wasteKind(summary) {
   const value = String(summary || '').toLocaleLowerCase('it')
   if (value.includes('umido') || value.includes('organico')) return 'organic'
@@ -97,10 +104,11 @@ export default function CasaEsRaccolta({ cardId = 'casa-es-raccolta' }) {
         : []
 
     const events = source
-      .map(event => ({
-        summary: String(event.summary || event.message || '').trim(),
-        start: localDate(event.start || event.start_time),
-      }))
+      .flatMap(event => {
+        const start = localDate(event.start || event.start_time)
+        return splitWasteSummary(event.summary || event.message)
+          .map(summary => ({ summary, start }))
+      })
       .filter(event => event.summary && event.start)
       .map(event => ({ ...event, offset: dayDiff(event.start, today) }))
       .filter(event => event.offset >= 1 && event.offset <= 15)
@@ -122,7 +130,7 @@ export default function CasaEsRaccolta({ cardId = 'casa-es-raccolta' }) {
 
     return {
       tonight: groups.find(group => group.offset === 1) || null,
-      upcoming: groups.filter(group => group.offset > 1).slice(0, 3),
+      upcoming: groups.filter(group => group.offset > 1).slice(0, 1),
       limited: !parsed.length && Boolean(calendarSummary && calendarStart),
     }
   }, [calendarStart, calendarSummary, sensorEvents, sensorState])

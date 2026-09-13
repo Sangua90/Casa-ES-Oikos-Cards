@@ -1,5 +1,10 @@
 # Changelog — Casa ES Raccolta Differenziata
 
+## [1.2.0] - 2026-09-13
+### Changed
+- Splits combined calendar summaries such as `Sterpaglie · Umido` into separate coloured collection panels.
+- Shows only the next collection date below tonight's collection.
+
 ## [1.1.0] - 2026-09-12
 ### Changed
 - Shows tomorrow's collections as the waste to put out tonight.

@@ -1,9 +1,9 @@
 {
   "id": "casa-es-raccolta",
   "name": "Casa ES Raccolta Differenziata",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Casa ES",
-  "description": "Mostra cosa esporre questa sera e tre prossimi ritiri dal calendario Home Assistant.",
+  "description": "Mostra separatamente cosa esporre questa sera e il ritiro successivo dal calendario Home Assistant.",
   "sdkVersion": "^1.2.0",
   "hasSettings": true,
   "entry": "dist/casa-es-raccolta.js",

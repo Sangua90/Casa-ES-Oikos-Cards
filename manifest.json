@@ -1,6 +1,6 @@
 {
   "repo": "Sangua90/Casa-ES-Oikos-Cards",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "sdkVersion": "1.2.0",
   "updated": "2026-09-13",
   "cards": [
@@ -82,9 +82,9 @@
     {
       "id": "casa-es-raccolta",
       "name": "Casa ES Raccolta Differenziata",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "author": "Casa ES",
-      "description": "Mostra cosa esporre questa sera e tre prossimi ritiri dal calendario Home Assistant.",
+      "description": "Mostra separatamente cosa esporre questa sera e il ritiro successivo dal calendario Home Assistant.",
       "sdkVersion": "^1.2.0",
       "hasSettings": true,
       "path": "cards/casa-es-raccolta",
@@ -99,6 +99,14 @@
       "package": null,
       "tier": "free",
       "changelog": [
+        {
+          "version": "1.2.0",
+          "date": "2026-09-13",
+          "changes": [
+            "Separates combined waste names into individual coloured panels.",
+            "Shows only the next collection date below tonight's collection."
+          ]
+        },
         {
           "version": "1.1.0",
           "date": "2026-09-12",

@@ -3,7 +3,7 @@
   "tonight": "Tonight",
   "exposeTonight": "Put out tonight",
   "nothingTonight": "Nothing to put out tonight",
-  "upcomingCollections": "Upcoming collections",
+  "upcomingCollections": "Next collection",
   "noCollections": "No collection scheduled",
   "noCollectionsHint": "Check the calendar or install the Home Assistant package in settings.",
   "limitedMode": "Limited to the next calendar event",
