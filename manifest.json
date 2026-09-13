@@ -1,13 +1,13 @@
 {
   "repo": "Sangua90/Casa-ES-Oikos-Cards",
-  "version": "3.5.3",
+  "version": "3.5.4",
   "sdkVersion": "1.2.0",
   "updated": "2026-09-13",
   "cards": [
     {
       "id": "casa-es-consumo-casa",
       "name": "Casa ES Consumo Casa",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Casa ES",
       "description": "Box OIKOS per il consumo totale istantaneo della casa.",
       "sdkVersion": "^1.2.0",
