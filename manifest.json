@@ -1,6 +1,6 @@
 {
   "repo": "Sangua90/Casa-ES-Oikos-Cards",
-  "version": "3.5.2",
+  "version": "3.5.3",
   "sdkVersion": "1.2.0",
   "updated": "2026-09-13",
   "cards": [
@@ -20,7 +20,11 @@
       "previews": null,
       "thumbnail": null,
       "logo": null,
-      "tags": ["home", "energy", "power"],
+      "tags": [
+        "home",
+        "energy",
+        "power"
+      ],
       "package": null,
       "tier": "free",
       "changelog": [
@@ -34,7 +38,8 @@
           ]
         }
       ],
-      "readme": null
+      "readme": null,
+      "type": "card"
     },
     {
       "id": "casa-es-consumo-dispositivo",
@@ -52,7 +57,12 @@
       "previews": null,
       "thumbnail": null,
       "logo": null,
-      "tags": ["home", "energy", "power", "appliance"],
+      "tags": [
+        "home",
+        "energy",
+        "power",
+        "appliance"
+      ],
       "package": null,
       "tier": "free",
       "changelog": [
@@ -67,7 +77,8 @@
           ]
         }
       ],
-      "readme": "cards/casa-es-consumo-dispositivo/README.md"
+      "readme": "cards/casa-es-consumo-dispositivo/README.md",
+      "type": "card"
     },
     {
       "id": "casa-es-ventole-stufetta",
@@ -85,7 +96,12 @@
       "previews": null,
       "thumbnail": null,
       "logo": null,
-      "tags": ["home", "fan", "heater", "controls"],
+      "tags": [
+        "home",
+        "fan",
+        "heater",
+        "controls"
+      ],
       "package": null,
       "tier": "free",
       "changelog": [
@@ -108,7 +124,8 @@
           ]
         }
       ],
-      "readme": null
+      "readme": null,
+      "type": "card"
     },
     {
       "id": "casa-es-garage",
@@ -126,7 +143,12 @@
       "previews": null,
       "thumbnail": null,
       "logo": null,
-      "tags": ["home", "garage", "security", "controls"],
+      "tags": [
+        "home",
+        "garage",
+        "security",
+        "controls"
+      ],
       "package": null,
       "tier": "free",
       "changelog": [
@@ -142,7 +164,8 @@
           ]
         }
       ],
-      "readme": null
+      "readme": null,
+      "type": "card"
     },
     {
       "id": "casa-es-raccolta",
@@ -160,7 +183,12 @@
       "previews": null,
       "thumbnail": null,
       "logo": null,
-      "tags": ["home", "calendar", "waste", "recycling"],
+      "tags": [
+        "home",
+        "calendar",
+        "waste",
+        "recycling"
+      ],
       "package": null,
       "tier": "free",
       "changelog": [
@@ -194,7 +222,8 @@
           ]
         }
       ],
-      "readme": null
+      "readme": null,
+      "type": "card"
     },
     {
       "id": "casa-es-boiler",
@@ -212,18 +241,26 @@
       "previews": null,
       "thumbnail": null,
       "logo": null,
-      "tags": ["home", "boiler", "water-heater", "temperature"],
+      "tags": [
+        "home",
+        "boiler",
+        "water-heater",
+        "temperature"
+      ],
       "package": null,
       "tier": "free",
-      "changelog": [{
-        "version": "1.0.0",
-        "date": "2026-09-12",
-        "changes": [
-          "Current water temperature.",
-          "Dynamic card color while the boiler is heating."
-        ]
-      }],
-      "readme": null
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-09-12",
+          "changes": [
+            "Current water temperature.",
+            "Dynamic card color while the boiler is heating."
+          ]
+        }
+      ],
+      "readme": null,
+      "type": "card"
     },
     {
       "id": "casa-es-ospiti",
@@ -241,18 +278,26 @@
       "previews": null,
       "thumbnail": null,
       "logo": null,
-      "tags": ["home", "guests", "mode", "controls"],
+      "tags": [
+        "home",
+        "guests",
+        "mode",
+        "controls"
+      ],
       "package": null,
       "tier": "free",
-      "changelog": [{
-        "version": "1.0.0",
-        "date": "2026-09-12",
-        "changes": [
-          "Live guest mode status and toggle.",
-          "Reminder information for the Casa ES automation."
-        ]
-      }],
-      "readme": null
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-09-12",
+          "changes": [
+            "Live guest mode status and toggle.",
+            "Reminder information for the Casa ES automation."
+          ]
+        }
+      ],
+      "readme": null,
+      "type": "card"
     },
     {
       "id": "casa-es-battery-check",
@@ -270,19 +315,27 @@
       "previews": null,
       "thumbnail": null,
       "logo": null,
-      "tags": ["home", "battery", "maintenance", "sensors"],
+      "tags": [
+        "home",
+        "battery",
+        "maintenance",
+        "sensors"
+      ],
       "package": null,
       "tier": "free",
-      "changelog": [{
-        "version": "2.0.0",
-        "date": "2026-09-12",
-        "changes": [
-          "Automatic discovery of Home Assistant battery sensors.",
-          "Configurable low-battery threshold and detailed device list.",
-          "Exclusion of photovoltaic storage batteries by default."
-        ]
-      }],
-      "readme": null
+      "changelog": [
+        {
+          "version": "2.0.0",
+          "date": "2026-09-12",
+          "changes": [
+            "Automatic discovery of Home Assistant battery sensors.",
+            "Configurable low-battery threshold and detailed device list.",
+            "Exclusion of photovoltaic storage batteries by default."
+          ]
+        }
+      ],
+      "readme": null,
+      "type": "card"
     }
   ]
 }

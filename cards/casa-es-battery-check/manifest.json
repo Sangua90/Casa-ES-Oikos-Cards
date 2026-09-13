@@ -8,7 +8,13 @@
   "hasSettings": true,
   "entry": "dist/casa-es-battery-check.js",
   "settings": "dist/casa-es-battery-check.settings.js",
-  "tags": ["home", "battery", "maintenance", "sensors"],
+  "tags": [
+    "home",
+    "battery",
+    "maintenance",
+    "sensors"
+  ],
   "configVersion": 2,
-  "defaultWidth": "lg"
+  "defaultWidth": "lg",
+  "type": "card"
 }

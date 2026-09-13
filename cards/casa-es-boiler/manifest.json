@@ -8,7 +8,13 @@
   "hasSettings": true,
   "entry": "dist/casa-es-boiler.js",
   "settings": "dist/casa-es-boiler.settings.js",
-  "tags": ["home", "boiler", "water-heater", "temperature"],
+  "tags": [
+    "home",
+    "boiler",
+    "water-heater",
+    "temperature"
+  ],
   "configVersion": 1,
-  "defaultWidth": "half"
+  "defaultWidth": "half",
+  "type": "card"
 }

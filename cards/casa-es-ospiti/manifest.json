@@ -8,7 +8,13 @@
   "hasSettings": true,
   "entry": "dist/casa-es-ospiti.js",
   "settings": "dist/casa-es-ospiti.settings.js",
-  "tags": ["home", "guests", "mode", "controls"],
+  "tags": [
+    "home",
+    "guests",
+    "mode",
+    "controls"
+  ],
   "configVersion": 1,
-  "defaultWidth": "half"
+  "defaultWidth": "half",
+  "type": "card"
 }

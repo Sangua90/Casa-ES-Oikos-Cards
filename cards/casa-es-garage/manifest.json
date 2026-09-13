@@ -15,5 +15,6 @@
     "controls"
   ],
   "configVersion": 1,
-  "defaultWidth": "half"
+  "defaultWidth": "half",
+  "type": "card"
 }

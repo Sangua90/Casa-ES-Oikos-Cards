@@ -8,7 +8,13 @@
   "hasSettings": true,
   "entry": "dist/casa-es-raccolta.js",
   "settings": "dist/casa-es-raccolta.settings.js",
-  "tags": ["home", "calendar", "waste", "recycling"],
+  "tags": [
+    "home",
+    "calendar",
+    "waste",
+    "recycling"
+  ],
   "configVersion": 1,
-  "defaultWidth": "half"
+  "defaultWidth": "half",
+  "type": "card"
 }

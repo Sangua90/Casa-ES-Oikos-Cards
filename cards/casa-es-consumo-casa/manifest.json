@@ -8,7 +8,12 @@
   "hasSettings": true,
   "entry": "dist/casa-es-consumo-casa.js",
   "settings": "dist/casa-es-consumo-casa.settings.js",
-  "tags": ["home", "energy", "power"],
+  "tags": [
+    "home",
+    "energy",
+    "power"
+  ],
   "configVersion": 1,
-  "defaultWidth": "half"
+  "defaultWidth": "half",
+  "type": "card"
 }
