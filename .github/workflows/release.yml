@@ -1,0 +1,27 @@
+name: Publish OIKOS release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Publish compiled cards and packages
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Casa ES Oikos Cards ${{ github.ref_name }}
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          files: |
+            manifest.json
+            cards/*/dist/**
+            packages/*.zip
