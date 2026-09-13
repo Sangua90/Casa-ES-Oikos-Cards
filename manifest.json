@@ -1,9 +1,42 @@
 {
   "repo": "Sangua90/Casa-ES-Oikos-Cards",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "sdkVersion": "1.2.0",
   "updated": "2026-09-13",
   "cards": [
+    {
+      "id": "casa-es-consumi",
+      "name": "Casa ES Consumi",
+      "version": "1.0.0",
+      "author": "Casa ES",
+      "description": "Consumo istantaneo della casa e dispositivi attivi ordinati per potenza.",
+      "sdkVersion": "^1.2.0",
+      "hasSettings": true,
+      "path": "cards/casa-es-consumi",
+      "entry": "cards/casa-es-consumi/dist/casa-es-consumi.js",
+      "settings": "cards/casa-es-consumi/dist/casa-es-consumi.settings.js",
+      "manifest": "cards/casa-es-consumi/manifest.json",
+      "preview": null,
+      "previews": null,
+      "thumbnail": null,
+      "logo": null,
+      "tags": ["home", "energy", "power", "appliances"],
+      "package": null,
+      "tier": "free",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-09-13",
+          "changes": [
+            "Live total home consumption.",
+            "Seventeen preconfigured appliance power sensors with individual thresholds.",
+            "Automatic sorting from the highest to the lowest active load.",
+            "Responsive OIKOS grid and dynamic power colours."
+          ]
+        }
+      ],
+      "readme": null
+    },
     {
       "id": "casa-es-ventole-stufetta",
       "name": "Casa ES Ventole e Stufetta",
